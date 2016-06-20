@@ -1,0 +1,98 @@
+#mainpanel    
+{
+    orientation: vertical;
+    top: 0px;
+    left: 0px;
+    width:              100%;
+    height:             100%;
+}
+
+#menubox
+{
+    top: 0px;
+    left: 0px;
+    orientation: horizontal; 
+    width: 100%;
+    height: 15px;
+    background-color:   rgb(73, 82, 82);
+}
+
+#fileViewButton
+{
+    left: 4px;
+    top: 5%;
+    width: 100px;
+    height: 90%;
+    background-color:   rgb(45, 45, 48);
+}
+
+#texgenViewButton
+{
+    top: 5%;
+    left: 5px;
+    width: 100px;
+    height: 90%;
+    background-color:   rgb(45, 45, 48);
+}
+
+
+#materialEditorViewButton
+{
+    top: 5%;
+    left: 5px;
+    width: 100px;
+    height: 90%;
+    background-color:   rgb(45, 45, 48);
+}
+
+#modelerViewButton
+{
+    top: 5%;
+    left: 5px;
+    width: 100px;
+    height: 90%;
+    background-color:   rgb(45, 45, 48);
+}
+
+#keyframerViewButton
+{
+    top: 5%;
+    left: 5px;
+    width: 100px;
+    height: 90%;
+    background-color:   rgb(45, 45, 48);
+}
+
+#body
+{
+    orientation: horizontal;
+    width: 100%;
+    height: 100%;
+    background-color:   rgb(0, 45, 48);
+}
+#SolutionBar
+{
+    orientation: vertical;
+    background-color: rgb(105, 1, 171);
+    width: 25%;
+    height: 100%;
+}
+#SolutionBar2
+{
+    orientation: vertical;
+    background-color: rgb(105, 1, 171);
+    left:50%;
+    width: 25%;
+    height: 100%;
+}
+.panel
+{
+    background-color: rgb(73, 82, 82);
+}
+
+.Headings
+{
+    width: 100%;
+    height: 2%;
+    background-color: rgb(49, 48, 48);
+}

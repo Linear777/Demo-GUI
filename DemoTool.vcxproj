@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinimalDemo|Win32">
+      <Configuration>MinimalDemo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1B61D1A-6DFA-4A75-BF12-F7DD1BD3176E}</ProjectGuid>
+    <RootNamespace>DemoTool</RootNamespace>
+    <ProjectName>WarlockDemoTool</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='MinimalDemo|Win32'">
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)\3rdparty\FW1FontWrapper_1_1;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\3rdparty\FW1FontWrapper_1_1\x86;$(OutDir);$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)\3rdparty\FW1FontWrapper_1_1;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(OutDir);$(DXSDK_DIR)Lib\x86;$(SolutionDir)\3rdparty\FW1FontWrapper_1_1\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinimalDemo|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(SolutionDir)3rdparty\FW1FontWrapper_1_1;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(SolutionDir)3rdparty\FW1FontWrapper_1_1\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Custom</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>false</GenerateMapFile>
+      <MapFileName>
+      </MapFileName>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)shaders\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST "$(OutDir)fonts\uni05_53.ttf" (
+xcopy "$(ProjectDir)uni05_53.ttf" "$(OutDir)fonts\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)data\favicon.ico" (
+xcopy "$(ProjectDir)data\favicon.ico" "$(OutDir)images\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)layout\warlockgui.css" (
+xcopy "$(ProjectDir)layout\warlockgui.css" "$(OutDir)layout\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)layout\warlockgui.xml" (
+xcopy "$(ProjectDir)layout\warlockgui.xml" "$(OutDir)layout\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)FW1FontWrapper.dll" (
+xcopy "$(SolutionDir)3rdparty\FW1FontWrapper_1_1\x86\FW1FontWrapper.dll" "$(OutDir)" /Y /I
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateMapFile>false</GenerateMapFile>
+      <MapFileName>
+      </MapFileName>
+      <MapExports>false</MapExports>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST "$(OutDir)fonts\uni05_53.ttf" (
+xcopy "$(ProjectDir)uni05_53.ttf" "$(OutDir)fonts\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)data\favicon.ico" (
+xcopy "$(ProjectDir)data\favicon.ico" "$(OutDir)images\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)layout\warlockgui.css" (
+xcopy "$(ProjectDir)layout\warlockgui.css" "$(OutDir)layout\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)layout\warlockgui.xml" (
+xcopy "$(ProjectDir)layout\warlockgui.xml" "$(OutDir)layout\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)FW1FontWrapper.dll" (
+xcopy "$(SolutionDir)3rdparty\FW1FontWrapper_1_1\x86\FW1FontWrapper.dll" "$(OutDir)" /Y /I
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinimalDemo|Win32'">
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <PostBuildEvent>
+      <Command>IF NOT EXIST "$(OutDir)fonts\uni05_53.ttf" (
+xcopy "$(ProjectDir)uni05_53.ttf" "$(OutDir)fonts\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)data\favicon.ico" (
+xcopy "$(ProjectDir)data\favicon.ico" "$(OutDir)images\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)layout\warlockgui.css" (
+xcopy "$(ProjectDir)layout\warlockgui.css" "$(OutDir)layout\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)layout\warlockgui.xml" (
+xcopy "$(ProjectDir)layout\warlockgui.xml" "$(OutDir)layout\" /Y /I
+)
+
+IF NOT EXIST "$(OutDir)FW1FontWrapper.dll" (
+xcopy "$(SolutionDir)3rdparty\FW1FontWrapper_1_1\x86\FW1FontWrapper.dll" "$(OutDir)" /Y /I
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="ClassTree.cpp" />
+    <ClCompile Include="CSSParser.cpp" />
+    <ClCompile Include="d3dclass.cpp" />
+    <ClCompile Include="Document.cpp" />
+    <ClCompile Include="EditBox.cpp" />
+    <ClCompile Include="EventDispatcher.cpp" />
+    <ClCompile Include="fwzSetup.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GUIBase.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Line.cpp" />
+    <ClCompile Include="Memtrack.cpp" />
+    <ClCompile Include="pugixml.cpp" />
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="Slider.cpp" />
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="WarlockMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="ChildCommand.h" />
+    <ClInclude Include="ClassTree.h" />
+    <ClInclude Include="CSSParser.h" />
+    <ClInclude Include="d3dclass.h" />
+    <ClInclude Include="Document.h" />
+    <ClInclude Include="EditBox.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="EventDispatcher.h" />
+    <ClInclude Include="fwzSetup.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GUIBase.h" />
+    <ClInclude Include="IEventHandler.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="Memtrack.h" />
+    <ClInclude Include="MeshData.h" />
+    <ClInclude Include="ParentCommand.h" />
+    <ClInclude Include="pugiconfig.hpp" />
+    <ClInclude Include="pugixml.hpp" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="ShaderHelper.h" />
+    <ClInclude Include="Slider.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Text.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="APEX-MaterialEditor.css" />
+    <None Include="data\GUIDesign\WarlockGUI.xcf" />
+    <None Include="layout\warlockgui.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="backpanel.dds" />
+    <Image Include="button_hover.png" />
+    <Image Include="button_unselected.dds" />
+    <Image Include="data\favicon (2).ico" />
+    <Image Include="data\favicon.ico" />
+    <Image Include="seafloor.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FWZ.rc" />
+    <ResourceCompile Include="WarlockDemoTool.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="logfiles\memory\memdump-201523-13-22-8.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="APEX-MaterialEditor.xml" />
+    <Xml Include="layout\warlockgui.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="rect_ps.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='MinimalDemo|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="rect_vs.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='MinimalDemo|Win32'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="uni05_53.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="FWZ.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{06e21182-66d9-4c6e-87d8-5aef46ac8f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUIImages">
+      <UniqueIdentifier>{e0063c6c-a7d4-4da1-806a-90eb1b5850ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GUIRenderer">
+      <UniqueIdentifier>{f4c2a7c0-ba6b-4993-bf72-cec7887b3e82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUIRenderer">
+      <UniqueIdentifier>{5b5c67ab-23bb-4236-a35a-7e6ecc78c6c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memtracker">
+      <UniqueIdentifier>{563e98a7-a53f-4619-ab74-d7d9916c27ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memtracker">
+      <UniqueIdentifier>{62057f08-7db4-4102-84b5-91c2a766347d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logfiles">
+      <UniqueIdentifier>{b79939b0-5f76-4117-87b0-3185ae6cfa6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logfiles\memory">
+      <UniqueIdentifier>{7b76335f-5dc7-44d9-ba69-1edea922a70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUIElements">
+      <UniqueIdentifier>{61f8c689-ffac-40c4-88a0-a16c0022c09b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUIElements">
+      <UniqueIdentifier>{68dfba9b-e829-4fc8-abf0-1f9752e334e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Renderer">
+      <UniqueIdentifier>{710ad6ee-a3a2-4721-a9b7-b239044343dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Renderer">
+      <UniqueIdentifier>{7b9a781f-7e2f-4a4a-884f-b1cf2f1c27e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WarlockMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventDispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml.cpp">
+      <Filter>Source Files\GUIRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Document.cpp">
+      <Filter>Source Files\GUIRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="fwzSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memtrack.cpp">
+      <Filter>Source Files\Memtracker</Filter>
+    </ClCompile>
+    <ClCompile Include="CSSParser.cpp">
+      <Filter>Source Files\GUIRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="EditBox.cpp">
+      <Filter>Source Files\GUIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIBase.cpp">
+      <Filter>Source Files\GUIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassTree.cpp">
+      <Filter>Source Files\GUIRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\GUIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="Slider.cpp">
+      <Filter>Source Files\GUIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IEventHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventDispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Document.h">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml.hpp">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiconfig.hpp">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CSSParser.h">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="fwzSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildCommand.h">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ParentCommand.h">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Memtrack.h">
+      <Filter>Header Files\Memtracker</Filter>
+    </ClInclude>
+    <ClInclude Include="EditBox.h">
+      <Filter>Header Files\GUIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIBase.h">
+      <Filter>Header Files\GUIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="Slider.h">
+      <Filter>Header Files\GUIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\GUIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassTree.h">
+      <Filter>Header Files\GUIRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshData.h">
+      <Filter>Header Files\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\GUIDesign\WarlockGUI.xcf">
+      <Filter>GUIImages</Filter>
+    </None>
+    <None Include="APEX-MaterialEditor.css">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="layout\warlockgui.css">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="backpanel.dds">
+      <Filter>GUIImages</Filter>
+    </Image>
+    <Image Include="button_unselected.dds">
+      <Filter>GUIImages</Filter>
+    </Image>
+    <Image Include="seafloor.dds">
+      <Filter>GUIImages</Filter>
+    </Image>
+    <Image Include="data\favicon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\favicon (2).ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="button_hover.png">
+      <Filter>GUIImages</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WarlockDemoTool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="FWZ.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="logfiles\memory\memdump-201523-13-22-8.log">
+      <Filter>logfiles\memory</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="APEX-MaterialEditor.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="layout\warlockgui.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="rect_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="rect_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="uni05_53.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
+</Project>

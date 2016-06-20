@@ -1,0 +1,58 @@
+<body>
+  <box id="mainpanel" >
+    <box id="menubox">
+      <button id="fileViewButton" class="button" text="File View"/>
+      <button id="texgenViewButton" class="button" text="TexGen"/>
+      <button id="materialEditorViewButton" class="button" text="MatEd"/>
+      <button id="modelerViewButton" class="button" text="Modeler"/>
+      <button id="keyframerViewButton" class="button" text="Keyframer"/>
+    </box>
+    <box id="body">
+      <box id="SolutionBar" class="panel">
+        <button class="Headings"></button>
+        <!--<button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button class="Headings"></button>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+      </box>
+      <box id="SolutionBar2" class="panel">
+        <button class="Headings"></button>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button class="Headings"></button>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>
+        <button/>-->
+      </box>
+    </box>
+
+  </box>
+ 
+  
+  
+  
+  
+  
+  
+  
+</body>
